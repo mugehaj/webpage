@@ -53,17 +53,24 @@ div.content {
 
   div.content {margin-left: 0;}
 }
-.footer {
+.header{
   padding:50px;
-  background-color: aqua;
-  text-align: center;
-}
+  background-color:light-gray;}
+  .footer{
+    padding:50px;
+    background-color:light-gray;}
+  
 
 @media screen and (max-width: 400px) {
   ul.sidenav li a {
     text-align: center;
     float: none;
   }
+  .flex{
+    display:flex;}
+  .side-menu{
+    flex:25%;}
+  .side-menu{flex:25%;}
 }
 </style>
 </head>
@@ -76,14 +83,22 @@ div.content {
   <li><a href="C:\Users\25475\OneDrive\Desktop\HTML\tables2.html\about.html">About</a></li>
 </ul>
 
-<div class="content">
-  <h2>Responsive Sidenav Example</h2>
-  <p>This example use media queries to transform the sidenav to a top navigation bar when the screen size is 900px or less.</p>
-  <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
+<div class="header">
+  
   
 </div>
+  <div class="flex">
+    <div class="side-menu">
+      
+    </div>
+    <div class="main">
+      
+    </div>
+    <div class="side-menu">
+      
+    </div>
+  </div>
 
 </body>
-<footer class="footer">
-</footer>
-</html>
+  <div class="footer">
+  </div>
