@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="A navigation bar">
+      <meta name="author" content="Jackie">
+      <meta charset="utf-8">
 <style>
 body {margin: 0;
       box-sizing:border-box;
@@ -16,7 +19,7 @@ body {margin: 0;
   display:block;
   text-align: center;
   padding:15px 20px;}
-  .sidebar a:hover {
+  .sidenav a:hover {
   background-color: #ddd;
   color:black;
 }
@@ -30,23 +33,32 @@ body {margin: 0;
 }
 .header{
   padding:50px;
+      text-align:center;
+      font-size:17px;
   background-color:light-gray;}
   .footer{
     padding:50px;
-    background-color:light-gray;}
+    background-color:light-gray;
+         text-align:center;
+      font-size:17px;
   }
   .flex{
     display:flex;}
+      .main{
+    flex:50%;
+        width:50%;
+    background-color:#ddd;
+            text-align:center;
+            height:auto;
+  }
   .side-menu{
     flex:25%;
         width:25%;
     background-color:#ccc;
+        text-align:center;
+        height:auto;
   }
-  .main{
-    flex:50%;
-        width:50%;
-    background-color:#ddd;
-  }
+  
       .header{
             background-color:#ccc;
             padding:50px;}
@@ -67,7 +79,7 @@ body {margin: 0;
 
 <div class="header">
   
-  
+  My website 
 </div>
   <div class="flex">
     <div class="side-menu">
@@ -83,5 +95,6 @@ body {margin: 0;
 
 </body>
   <div class="footer">
+        The End
   </div>
 </html>
