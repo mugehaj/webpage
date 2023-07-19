@@ -72,6 +72,27 @@ body {margin: 0;
       }
   
 </style>
+      <script>
+           function validateForm() {
+  let fname = document.getElementById("fname").value;
+  let lname = document.getElementById("lname").value;
+  let pass = document.getElementById("pass").value;
+  let email = document.getElementById("email").value;
+  if (fname == "" || lname =="") {
+    alert("Name must be filled out");
+    return false;
+  }
+  if (pass =="") {
+    alert("Please set password");
+    return false;
+  }
+  if (email =="") {
+    alert("Enter Valid email");
+    return false;
+  }
+  alert(fname +''+lname+'\n'+email);
+} 
+      </script>
 </head>
 <body>
 
@@ -91,7 +112,17 @@ body {margin: 0;
       SIDE-MENU
     </div>
     <div class="main">
-      MAIN
+      MAIN <br>
+          <form name="myForm">
+  First Name: <input type="text" id="fname">
+  <br/>
+  Last Name: <input type="text" id="lname">
+  <br/> email: <input type="text" id="email">
+  <br/> Password: <input type="password" id="pass">
+  <br/>
+  <button onclick="validateForm()">Submit</button>
+</form>
+          
     </div>
     <div class="side-menu">
       SIDE-MENU
