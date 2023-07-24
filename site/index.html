@@ -1,136 +1,362 @@
 <!DOCTYPE html>
-<html lang="en-US>
+<html lang="en-US">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="A navigation bar">
-      <meta name="author" content="Jackie">
-      <meta charset="utf-8">
-<style>
-body {margin: 0;
-      box-sizing:border-box;
-     }
-  .sidenav{
-    overflow:hidden;
-    background-color:white;}
-  .sidenav a{
-    text-decoration: none;
-  float: left;
-  color:black;
-  display:block;
-  text-align: center;
-  padding:15px 20px;}
-  .sidenav a:hover {
-  background-color: #ddd;
-  color:black;
-}
-  .sidenav a.active {
-  color:white;
-  background-color:rgba(194, 58, 31);
-}
-  .sidenav a.active:hover {
-  background-color: #ddd;
-  color:black;
-}
-.header{
-  padding:50px;
-      text-align:center;
-      font-size:17px;
-  background-color:light-gray;}
-  .footer{
-    padding:50px;
-    background-color:light-gray;
-         text-align:center;
-      font-size:17px;
-  }
-  .flex{
-    display:flex;
-        margin-top:8px;
-  }
-      .main{
-    flex:50%;
-        width:50%;
-    background-color:#ddd;
-            text-align:center;
-            height:44vh;
-            margin:8px;
-  }
-  .side-menu{
-    flex:25%;
-        width:25%;
-    background-color:#ccc;
-        text-align:center;
-        height:44vh;
-  }
-  
-      .header{
-            background-color:#ccc;
-            padding:50px;}
-      .footer{
-            background-color:#ccc;
-            padding:50px;
-            margin-top:8px;
-      }
-  
-</style>
-      <script>
-           function validateForm() {
-  let fname = document.getElementById("fname").value;
-  let lname = document.getElementById("lname").value;
-  let pass = document.getElementById("pass").value;
-  let email = document.getElementById("email").value;
-  if (fname == "" || lname =="") {
-    alert("Name must be filled out");
-    return false;
-  }
-  if (pass =="") {
-    alert("Please set password");
-    return false;
-  }
-  if (email =="") {
-    alert("Enter Valid email");
-    return false;
-  }
-  alert(fname +''+lname+'\n'+email);
-} 
-      </script>
+  <title>Architects template</title>
+  <meta name="author" content="Mugeha">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Architect's webpage">
+  <meta http-equiv="refresh" content="30">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+
 </head>
+<style>
+*{
+  margin:0;
+  padding: 0;
+}
+body {
+  font-family: "Trirong", serif;
+}
+.topnav{
+  height:4vh;
+  padding:20px;
+  color:black;
+  position: sticky;
+  position:relative;
+}
+.left-nav{
+  float:left;
+}
+.right-nav{
+  float:right;
+  text-align: center;
+  display:inline-block;
+}
+.left-nav a{
+  text-decoration: none;
+  color:black;
+  padding:26px;
+  letter-spacing: 2px;
+}
+.right-nav a{
+  text-decoration: none;
+  color:black;
+  letter-spacing: 2px;
+  word-spacing: 50px;
+}
+.containerimage img{
+  position: relative;
+  height:500;
+  width:100%;
+}
+.architect{
+  color:rgb(18, 17, 17);
+  font-size: 22px;
+  word-spacing: 3px;
+}
+.containertext{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+.content{
+  padding:22px;
+}
+.projects h1{
+  border-bottom:1px solid rgb(158, 157, 157);
+  padding:10px;
+  font-size: 22px;
+}
+.myImages{
+display:flex;
+flex-wrap:wrap;
+}
+.Image1{
+  flex:24.33%;
+  margin:2px;
+}
+.Image1-text{
+  float: top-left;
+  position: absolute;
+  background-color: black;
+  color: white;
+}
+.Image2{
+  flex:24.33%;
+  margin:2px;
+}
+.Image2-text{
+  float: top-left;
+  position: absolute;
+  background-color: black;
+  color: white;
+}
+.Image3{
+flex:24.33%;
+margin:2px;
+}
+.Image3-text{
+  float: top-left;
+  position: absolute;
+  background-color: black;
+  color: white;
+}
+.Image4{
+  flex:24.33%;
+  margin:2px;
+}
+.Image4-text{
+  float: top-left;
+  position: absolute;
+  background-color: black;
+  color: white;
+}
+.B{
+  padding: 22px;
+}
+.about h3{
+  border-bottom:1px solid rgb(158, 157, 157);
+  padding:10px;
+  font-size: 22px;
+}
+.ImageGallery{
+  display: flex;
+  flex-wrap: wrap;
+}
+.Img1{
+  flex:24.33%;
+  margin:2px;
+}
+.Img2{
+  flex:24.33%;
+  margin:2px;
+}
+.Img3{
+  flex:24.33%;
+  margin:2px;
+}
+.Img4{
+  flex:24.33%;
+  margin:2px;
+}
+.F-1 {
+  margin-left: 10px;
+}
+.B-1{
+  width:20%;
+}
+.Opacity{
+  opacity:0.5;
+}
+button{
+  padding:20px;
+  color: black;
+  background-color: #ddd;
+  border: none;
+  display: block;
+  width:100%;
+  font-size: 20px;
+}
+button:hover{
+  background-color: #ccc;
+}
+.contact{
+  padding:22px;
+}
+.contact h3{
+  border-bottom:1px solid rgb(158, 157, 157);
+  padding:10px;
+  font-size: 22px;
+}
+input[type=text] {
+  display:block;
+  padding:12px 20px;
+  border:1px solid #ccc;
+  box-sizing:border-box;
+  border-radius: 4px;
+  margin:8px;
+}
+input[type=submit]{
+  background-color: rgb(24, 25, 26);
+  margin:8px 0;
+  color:white;
+  cursor:pointer;
+  border: none;
+  border-radius: 4px;
+  padding:20px 32px;
+  width:40%;
+}
+input[type=submit]:hover{
+  background-color: #ddd;
+  color:black;
+}
+.foot{
+  background-color: rgb(24, 25, 26);
+  color:white;
+  padding: 20px 32px;
+  margin:8px 0;
+  text-align: center;
+  text-decoration: none;
+}
+.foot a{
+  color:white;
+  text-decoration: none;
+}
+.foot a:hover{
+  color:rgb(59, 80, 115);
+}
+</style>
+<script>
+     function validateForm() {
+let fname = document.getElementById("fname").value;
+let lname = document.getElementById("lname").value;
+let pass = document.getElementById("pass").value;
+let email = document.getElementById("email").value;
+if (fname == "" || lname =="") {
+alert("Name must be filled out");
+return false;
+}
+if (pass =="") {
+alert("Please set password");
+return false;
+}
+if (email =="") {
+alert("Enter Valid email");
+return false;
+}
+alert(fname +''+lname+'\n'+email);
+}
+</script>
 <body>
-
-<div class="sidenav">
-  <a class="active" href="#home">Home</a>
-  <a href="C:\Users\25475\OneDrive\Desktop\HTML\tables2.html\news.html">News</a>
-  <a href="C:\Users\25475\OneDrive\Desktop\HTML\tables2.html\contact.html">Contact</a>
-  <a href="C:\Users\25475\OneDrive\Desktop\HTML\tables2.html\about.html">About</a>
-</div>
-
-<div class="header">
-  
-  My website 
-</div>
-  <div class="flex">
-    <div class="side-menu">
-      SIDE-MENU
+  <div class="topnav">
+    <div class="left-nav">
+      <a href="#"><b>B R</b> Architects</a>
     </div>
-    <div class="main">
-      MAIN <br>
-          <form name="myForm">
-  First Name: <input type="text" id="fname">
-  <br/>
-  Last Name: <input type="text" id="lname">
-  <br/> email: <input type="text" id="email">
-  <br/> Password: <input type="password" id="pass">
-  <br/>
-  <button onclick="validateForm()">Submit</button>
+    <div class="right-nav">
+      <a href="C:\Users\25475\OneDrive\Desktop\HTML\tables2.html\MyAtomProjects\projects.html">Projects</a>
+      <a href="C:\Users\25475\OneDrive\Desktop\HTML\tables2.html\MyAtomProjects\about.html">About</a>
+      <a href="C:\Users\25475\OneDrive\Desktop\HTML\tables2.html\MyAtomProjects\contact.html">Contact</a>
+    </div>
+  </div>
+  <header>
+    <div class="container">
+      <div class="containerimage">
+        <img src="https://www.w3schools.com/w3images/architect.jpg" alt="Br Architects" style="width:100%; height:600;">
+        <div class="containertext"><span><h1 style="font-size:30px; color:white;background-color:black;opacity:0.6;padding:10px;">B R</h1></span><span class="architect">Architects</span>
+          </div>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    <div class="projects">
+      <h1>Projects</h1>
+    </div>
+  </div>
+    <div class="myImages">
+      <div class="Image1">
+        <div class="Image1-text">Summerhouse</div>
+        <img src="https://www.w3schools.com/w3images/house5.jpg" alt="House" style="width:100%;">
+      </div>
+      <div class="Image2">
+        <div class="Image2-text">BrickHouse</div>
+        <img src="https://www.w3schools.com/w3images/house2.jpg" alt="House" style="width:100%;">
+      </div>
+      <div class="Image3">
+        <div class="Image3-text">Renovated</div>
+        <img src="https://www.w3schools.com/w3images/house3.jpg" alt="House" style="width:100%;">
+      </div>
+      <div class="Image4">
+        <div class="Image4-text">Barn House</div>
+        <img src="https://www.w3schools.com/w3images/house4.jpg" alt="House" style="width:100%;">
+      </div>
+    </div>
+
+    <div class="myImages">
+      <div class="Image1">
+        <div class="Image1-text">Summerhouse</div>
+        <img src="https://www.w3schools.com/w3images/house5.jpg" alt="House" style="width:100%;">
+      </div>
+      <div class="Image2">
+        <div class="Image2-text">BrickHouse</div>
+        <img src="https://www.w3schools.com/w3images/house2.jpg" alt="House" style="width:100%;">
+      </div>
+      <div class="Image3">
+        <div class="Image3-text">Renovated</div>
+        <img src="https://www.w3schools.com/w3images/house3.jpg" alt="House" style="width:100%;">
+      </div>
+      <div class="Image4">
+        <div class="Image4-text">Barn House</div>
+        <img src="https://www.w3schools.com/w3images/house4.jpg" alt="House" style="width:100%;">
+      </div>
+    </div>
+<div class="B">
+    <div class="about">
+      <h3>About</h3></div>
+    </div>
+    <div>
+      <p style="margin:10px;">
+        Architecture is a broad and multifaceted field that encompasses the design, planning, and construction of buildings, structures, and environments. It is both an art and a science, combining aesthetic and functional considerations to create spaces that meet the needs of people while also harmonizing with their surroundings.
+      </p>
+    </div>
+
+    <div class="ImageGallery">
+      <div class="Img1">
+        <img src="https://www.w3schools.com/w3images/team2.jpg" alt="John" style="width:100%;">
+        <h3>John</h3>
+        <p class="Opacity">CEO & Founder</p>
+        <p>Advances in materials and construction technology have significantly influenced architectural design and possibilities. The use of steel, concrete, glass, and new composite materials has allowed architects to create innovative and daring structures.</p>
+        <p><button type="button">Contact</button></p>
+      </div>
+      <div class="Img2">
+        <img src="https://www.w3schools.com/w3images/team1.jpg" alt="Jane Doe" style="width:100%;">
+        <h3>Jane Doe</h3>
+        <p class="Opacity">Architect</p>
+        <p>Architecture is closely related to urban planning, where architects and planners work together to create functional and aesthetically pleasing urban spaces. Urban planning involves designing cities and communities, considering factors like transportation.</p>
+        <p><button type="button">Contact</button></p>
+      </div>
+      <div class="Img3">
+        <img src="https://www.w3schools.com/w3images/team3.jpg" alt="Mike" style="width:100%;">
+        <h3>Mike Ross</h3>
+        <p class="Opacity">Architect</p>
+        <p>In recent years, sustainable architecture has gained prominence, focusing on environmentally friendly and energy-efficient designs. Sustainable architects incorporate renewable materials, passive design principles, and innovativeness.</p>
+        <p><button type="button">Contact</button></p>
+      </div>
+      <div class="Img4">
+        <img src="https://www.w3schools.com/w3images/team4.jpg" alt="Dan" style="width:100%;">
+        <h3>Dan Starr</h3>
+        <p class="Opacity">Architect</p>
+        <p> Many buildings around the world are celebrated for their architectural significance and cultural importance. Examples include the Eiffel Tower, the Taj Mahal, the Sydney Opera House, and the Burj Khalifa.</p>
+        <p><button type="button">Contact</p>
+      </div>
+    </div>
+    <div class="contact">
+      <h3>Contact</h3>
+      <p>Lets get to know your projects</p>
+
+    </div>
+    <div class="F-1">
+    <form name="myForm">
+      <label>First Name: </label>
+<input type="text" id="fname" size="100">
+<label>Last Name:</label>
+ <input type="text" id="lname" size="100">
+ <label>E-mail: </label>
+<input type="text" id="email" size="100">
+<label>Message</label>
+<input type="text" id="pass" size="100">
+
+<button onclick="validateForm()" class="B-1">Submit</button>
 </form>
-          
-    </div>
-    <div class="side-menu">
-      SIDE-MENU
-    </div>
-  </div>
+</div>
 
-</body>
-  <div class="footer">
-        The End
-  </div>
-</html>
+    <div class="container">
+      <img src="https://www.w3schools.com/w3images/map.jpg" alt="myImage" style="width:100%;">
+    </div>
+    <footer class="foot">
+      <p><a href="#">www.architectsassociation</a></p>
+    </footer>
+  </body>
+  </html>
+                      
